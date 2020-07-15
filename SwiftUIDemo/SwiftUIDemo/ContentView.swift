@@ -12,6 +12,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                Section(header: Text("基础控件")) {
+                    NavigationLink(destination: TextPage()) {
+                        PageRow(title: "Text", subTitle: "UILabel -> Text")
+                    }
+                    NavigationLink(destination: WebViewPage()) {
+                        PageRow(title: "TextFiled", subTitle: "UITextFiled -> TextFiled")
+                    }
+                    NavigationLink(destination: WebViewPage()) {
+                        PageRow(title: "TextEditor", subTitle: "UITextView -> ")
+                    }
+                }
                 Section(header: Text("特殊视图")) {
                     NavigationLink(destination: WebViewPage()) {
                         PageRow(title: "WKWebView", subTitle: "打开网页")
